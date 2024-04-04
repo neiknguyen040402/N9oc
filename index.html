@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Happi happii</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<style>
+	#audio-controls {
+	  display: none;
+	}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<audio src="sound.mp3" controls autoplay loop id="audio-controls"></audio>
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*CODE NÀY TUY NHÌU BUG NHƯNG HƠI BỊ NHÌU TÌNH CẢM :></span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Này cậu gì kia !<br />
+			Hôm nay là một ngày đặc biệt lắm đó;<br />
+			<span class="comments">// 05/04/2004 ♡ 05/04/2024 </span><br />
+			Không biết là trùng hợp hay có duyên mà sinh nhật em lại sau anh một ngày :><br />
+			<span class="comments">// Vậy là cũm bước sang U30 giống anh ròi nhaa</span><br />
+			Tuổi mới chúc em luôn xinh đẹp dễ thương;<br />
+			Nụ cười ấy luôn nở trên môi vì em cười tươi lắm lắm;<br />
+			Lấy thêm nhiều nhiều học bổng nữa nè;<br />
+			Để ngày một tiến gần đến với những dự định đang ấp ủ;<br />
+			<span class="comments">// Mà chẳng chịu kể anh nghe với :></span><br />
+			Và đặc biệt;<br />
+			Mong em tuổi mới yêu thương bản thân, chú ý sức khỏe của mình hơn;<br />
+			Vì cứ như vậy, nhiều người sẽ lo lắng cho em lắm đó;<br />
+			<span class="comments">// Rấc là ngoan rùi nhưng mà mỗi cài này còn hư thôi nhá =))</span><br />
+			<br />
+			<br>
+			<span class="comments">// Chỉ muốn nói là</span><br />
+			Happy birthday bạn nhỏ Minh Ngọc :><br />
+			Sẽ luôn có một bông 🌻 hướng về em và ủng hộ em hết mình :"<br />
+			<br>
+			<br>
+			Làm bài giữa kỳ <b>Đại số đại cương</b> thật tốt nhéeeee, ☘️☘️☘️ may mắn sẽ luôn ở bên với iem.<br />
+			<br>
+			<span id="heartspan">
+			<a><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					<br/>
+					<div class="signature"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2004, 4, 5);
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
